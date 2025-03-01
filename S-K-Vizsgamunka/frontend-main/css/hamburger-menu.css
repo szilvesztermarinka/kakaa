@@ -1,0 +1,307 @@
+* {
+    font-family: "Lustria", serif;
+}
+.ham-title{
+    font-weight: lighter;
+    font-size: smaller;
+    text-align: left;
+}
+header {
+    background: #ddd;
+    padding: 10px 20px;
+    padding: 0px;
+    margin: 0px;
+
+}
+.black-frame {
+    font-family: "Lustria", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+.white-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 40px;
+    position: relative;
+}
+
+.title-sk {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+/*.white-frame {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 40px;
+
+    
+}
+**/
+.white-frame > div:nth-child(2) {
+    text-align: center;
+    justify-self: center;
+}
+
+body {
+    font-family: "Lustria", serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top:90px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    top: 68px; 
+    margin-top: -8px;
+    
+}
+.menu a {
+   
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    display: block;
+}
+.menu a:hover {
+    background-color: #c2c2c2;
+
+
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+.hamburger div {
+    background: black;
+    height: 4px;
+    width: 100%;
+    transition: 0.4s;
+    position: absolute;
+    left: 0;
+}
+.hamburger div:nth-child(1) {
+    top: 0;
+}
+.hamburger div:nth-child(2) {
+    top: 10px;
+}
+.hamburger div:nth-child(3) {
+    top: 20px;
+}
+.menu-toggle {
+    display: none;
+}
+.hamburger-menu {
+    background:white ;
+    width: 30px;
+}
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+* {
+    font-family: "Lustria", serif;
+}
+
+header {
+    background: #ddd;
+    padding: 0;
+    margin: 0;
+}
+
+.black-frame {
+    font-family: "Lustria", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+body {
+    font-family: "Lustria", serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: none;
+    flex-direction: row;
+    background: #ffffff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px 12px;
+    border-top: 1px solid black ;
+}
+.col{
+    width: 310px;
+    margin-left: 168px;
+    padding-left:300px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}
+.col2{
+    width: 310px;
+    padding-left: 150px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.menu .col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 350px;
+    
+}
+.ham-items{
+    border-right: 1.5px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.ham-items2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    padding-bottom: 30px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 0px solid #444;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    background-color: #ffffff;
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger div {
+    background: black;
+    height: 4px;
+    width: 100%;
+    transition: 0.4s;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger div:nth-child(1) {
+    top: 0;
+}
+.hamburger div:nth-child(2) {
+    top: 10px;
+}
+.hamburger div:nth-child(3) {
+    top: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Fixed Toggle Menu Visibility */
+.menu-toggle:checked ~ .menu {
+    display: flex;
+}
+
+/* Fixed Hamburger Animation */
+.menu-toggle:checked ~ .hamburger-menu .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+.menu-toggle:checked ~ .hamburger-menu .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle:checked ~ .hamburger-menu .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+
+.menu-toggle:checked + .menu{
+    display: flex;
+}
+
+
+
+.menu-toggle:checked + .hamburger-menu .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+.menu-toggle:checked + .hamburger-menu .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle:checked + .hamburger-menu .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+.header-r-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-self: end;
+}
+img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,591 @@
+/*Overall*/
+* {
+    font-family: "Lustria", serif;
+}
+
+/*-----HEADER-----*/
+.ham-title {
+    font-weight: lighter;
+    font-size: smaller;
+    text-align: left;
+}
+
+.header {
+    background: #ddd;
+    padding: 10px 20px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1000;
+    top: 0;
+    position: sticky;
+}
+
+.black-frame {
+    font-family: "Lustria", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    z-index: 10;
+}
+
+.black-frame p {
+    z-index: 10;
+}
+
+.white-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.title-sk {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.title-sk a {
+    text-decoration: none;
+    color: black;
+}
+
+.white-frame > div:nth-child(2) {
+    text-align: center;
+    justify-self: center;
+}
+
+.header-r-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-self: end;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----FOOTER-----*/
+.footer {
+    width: auto;
+    height: 300px;
+    background-color: black;
+    position: sticky;
+}
+
+/*-----HAMBURGER MENU-----*/
+
+.hamburger div:nth-child(1) {
+    top: 0;
+}
+
+.hamburger div:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger div:nth-child(3) {
+    top: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+    flex-direction: row;
+    background: #ffffff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px 0px;
+    border-top: 1px solid black;
+    z-index: 10;
+    top: 63px;
+    left: 0;
+    margin-top: -8px;
+}
+
+.col {
+    width: 310px;
+    margin-left: 168px;
+    padding-left: 300px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.col2 {
+    width: 310px;
+    padding-left: 150px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.menu .col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 350px;
+}
+
+.ham-items {
+    border-right: 1.5px solid black;
+    margin-top: 20px;
+    transition: top 0.4s ease;
+    margin-bottom: 20px;
+}
+
+.ham-items2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    padding-bottom: 30px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 0px solid #444;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger div {
+    background: black;
+    height: 4px;
+    width: 100%;
+    transition: 0.4s;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+.hamburger div:nth-child(1) {
+    top: 0;
+}
+
+.hamburger div:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger div:nth-child(3) {
+    top: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked ~ .menu,
+.menu-toggle:checked + .menu {
+    display: flex;
+}
+
+.menu-toggle:checked ~ .hamburger-menu .hamburger div:nth-child(1),
+.menu-toggle:checked + .hamburger-menu .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.menu-toggle:checked ~ .hamburger-menu .hamburger div:nth-child(2),
+.menu-toggle:checked + .hamburger-menu .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .hamburger-menu .hamburger div:nth-child(3),
+.menu-toggle:checked + .hamburger-menu .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/*-----BODY-----*/
+body {
+    font-family: "Lustria", serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background-img {
+    background: url("../images/Background1.png");
+    background-size: cover;
+    height: 800px;
+}
+
+/*slogen*/
+.background {
+    color: white;
+    max-width: 600px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 10%;
+}
+
+.background h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.background p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/*Produts-bar*/
+.black-p-bar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 45px;
+}
+
+.black-p-bar a {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: none;
+    text-decoration: none;
+}
+
+/*Cart*/
+.cart-menu {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 800px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#close-cart {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: black;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.cart-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cart-content p {
+    font-size: 18px;
+    color: black;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 20px;
+}
+
+.empty-cart p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.shop-all-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.shop-all-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Show menu when checkbox is checked */
+.menu-toggle:checked ~ .menu {
+    display: flex;
+}
+.search-item-info{
+    margin-right: 5px;
+}
+.search-result {
+    background-color: white;
+    margin: 10px 10px;
+}
+.search-add-card-btn{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.search-item-img {
+    height: 40%;
+    width: 40%;
+    margin-right: 10px;
+}
+/* Search Item */
+.search-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s;
+}
+
+.search-item:hover {
+    background: #f9f9f9;
+}
+
+.search-container {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 800px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#clear-search {
+    display: none;
+}
+
+.search-container input:valid + #clear-search {
+    display: block;
+}
+
+/* Search Header */
+.search-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    height: 45px;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.search-header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Search Input */
+.search-input-container {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 0;
+}
+
+.search-container hr {
+    width: 90%;
+}
+
+.search-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Search Icon */
+.search-icon {
+    font-size: 16px;
+    margin-right: 10px;
+    color: gray;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: 50px;
+    height: 60px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Search Item Details */
+.search-item-details {
+    flex: 1;
+}
+
+.search-category {
+    font-size: 12px;
+    color: gray;
+}
+
+.search-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-price {
+    font-size: 14px;
+    color: #222;
+}
+
+.add-card-btn {
+    display: block;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    top: 100px;
+
+}
+
+.add-card-btn:hover {
+    background-color: #333;
+}
+.add-card-btn p {  
+    padding: 10px;
+    margin: 0;  
+
+}
+/*products*/
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(20% - 20px);
+    text-align: center;
+    margin: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    height: 400px;
+   
+}
+
+.product-image {
+    width: 244px;
+    height: 244px;
+    border-radius: 8px;
+    margin: 0 auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+    
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-category {
+    font-size: 0.9em;
+    color: #777;
+}
+
+#produts-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 80px;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*-----Overlay buring-----*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+/* Show overlay when active */
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ensure overlay shows when menu is open */
+.menu-toggle:checked ~ .overlay {
+    display: block;
+}

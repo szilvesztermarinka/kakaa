@@ -1,0 +1,191 @@
+.profilepic{
+    width: 60%;
+}
+* 
+{
+  font-family: "Lustria", serif;
+}
+header {
+    width: 100%;
+    height: 95px;
+}
+
+body {
+    font-family: "Lustria", serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+button,input {
+    font-family: "Lustria", serif;
+}
+
+.black-frame {
+    font-family: "Lustria", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+.white-frame {
+    font-size: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-box {
+    height: 600px;
+    width: 335px;
+    background: #d3d3d3;
+    padding: 40px;
+    box-shadow: 0px 6px 5px #C1C1C1;
+    border: 2px solid #B6B6B6;
+}
+
+h2 {
+    font-weight: 100;
+    margin-top: -12px;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    position: relative;
+    width: 250px
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #B6B6B6;
+    border-radius: 5px;
+    background-color: #EDEDED;
+    padding-right: 40px;
+}
+
+.change-icon {
+    width: 20px;
+    position: absolute;
+    top: 65%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    left: 320px;
+
+}
+
+.btn {
+    background-color: #EDEDED;
+    color: black;
+    border: 2px solid #B6B6B6;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Lustria", serif;
+}
+
+.btn:hover {
+    background-color: #c2c2c2;
+}
+
+.reg-text {
+    color: #45438D;
+    padding: 10px;
+    ;
+}
+
+.remenberme {
+    position: absolute;
+    padding-top: 10px;
+    justify-content: start;
+
+}
+
+.Forgot-psw {
+    position: absolute;
+    width: 140px;
+    left: 200px;
+    bottom: 0px;
+}
+
+
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+.btn, .btnlogout {
+    background-color: #EDEDED;
+    color: black;
+    border: 2px solid #B6B6B6;
+    padding: 15px;
+    width: 100%; 
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Lustria", serif;
+margin-top: 8px;
+}
+
+.btn:hover, .btnlogout:hover {
+    background-color: #c2c2c2;
+}
+.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.prodile-picture{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    border-radius: 2px solid;
+    background-color: black;
+    background: url(../images/Cart.png);
+    background-position: center;
+    position: relative;
+}
+.profile-icon-change{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: -30px;
+    bottom: -10px;
+    position: absolute;
+}
+.profile-pic-frame{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet" />
+    <title>S&K</title>
+</head>
+
+<body onload="allList()">
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header">
+        <div class="black-frame">
+            <p>
+                Spend $150+ for Free Shipping <br />
+                First purchase 12% off
+            </p>
+        </div>
+
+        <div class="white-frame">
+            <div class="menu-container">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <label for="menu-toggle" class="hamburger-menu">
+                    <div class="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </label>
+
+                <div class="menu">
+                    <div class="col">
+                        <div class="ham-items">
+                            <h1 class="ham-title">S&K</h1>
+                            <a href="#">About Us</a>
+                            <a href="#">Help & Support</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">About Shipping</a>
+                            <a href="#">Returns & Exchanges</a>
+                            <a href="#">About First Purchase</a>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <div class="ham-items2">
+                            <h1 class="ham-title">Clothings</h1>
+                            <a href="#">Waistcoat</a>
+                            <a href="#">Dress Shirt</a>
+                            <a href="#">Necktie</a>
+                            <a href="#">Belt</a>
+                            <a href="#">Trousers</a>
+                            <a href="#">Shoes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-sk"><a href="../html/Home.html">S&K</a></div>
+            <div class="header-r-items">
+                <img id="search-btn" src="../images/Search.png" alt="Search" />
+                <img id="cart-btn" src="../images/Cart.png" alt="Cart" />
+                <a href="../html/Profile.html">
+                    <img src="../images/profile_icon.png" alt="Profile" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Dropdown -->
+    <div class="search-container" id="searchContainer">
+        <div class="search-header">
+            <img src="../images/close-img.png" alt="close-img" />
+            <span>Search</span>
+        </div>
+        <div class="search-input-container">
+            <img src="../images/Search.png" alt="search.img" />
+            <input type="text" class="search-box" id="search" placeholder="Search..." required />
+            <img id="clear-search" src="../images/close-img.png" alt="clear-search">
+        </div>
+        <hr> <!-- Áthelyezve a keresési eredmények alá -->
+        <div class="search-result">
+            
+        </div>
+    </div>
+
+
+    <!-- Cart Menu (Hidden by default) -->
+    <div id="cart-menu" class="cart-menu">
+    <div class="cart-header">
+        <button id="close-cart">
+            <img src="../images/close-img.png" alt="close-cart" />Back To Shopping
+        </button>
+    </div>
+
+    <!-- Kosár tartalma -->
+    <div class="cart-content">
+        <p>Your cart is currently empty.</p>
+        <button class="shop-all-btn">Shop All</button>
+    </div>
+
+    <!-- Kosár végösszeg és Checkout gomb -->
+    <div class="cart-footer">
+        <div class="cart-total">Total: <span id="total-price">0$</span></div>
+        <button id="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+
+
+    <div class="background-img">
+        <div class="background">
+            <h1>Style that Speaks</h1>
+            <p>Wear Your Story</p>
+        </div>
+    </div>
+    <div class="black-p-bar">
+        <a href="#" id="waistcoat-link">Waistcoat</a>
+        <a href="#" id="dress-shirt-link">Dress Shirt</a>
+        <a href="#" id="necktie-link">Necktie</a>
+        <a href="#" id="belt-link">Belt</a>
+        <a href="#" id="trousers-link">Trousers</a>
+        <a href="#" id="shoes-link">Shoes</a>
+    </div>
+
+    <div>
+        <div id="produts-cards"></div>
+    </div>
+
+    <script src="../js/Home.js"></script>
+    <footer>
+        <div class="footer"></div>
+    </footer>
+</body>
+
+</html>
