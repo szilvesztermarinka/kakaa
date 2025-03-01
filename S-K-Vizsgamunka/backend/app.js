@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
     cors({
-        origin: "http://127.0.0.1:5500",
+        origin: "http://localhost:5500",
         credentials: true,
     })
 );
@@ -105,8 +105,6 @@ function authenticateToken(req, res, next) {
         next();
     });
 }
-
-
 
 //register
 app.post("/api/Register", (req, res) => {
@@ -420,32 +418,34 @@ app.post("/api/cart", authenticateToken, (req, res) => {
             return res.status(500).json({ error: "Adatbázis hiba." });
         }
 
-        // Frissített kosár visszaküldése
+        const asd = `SELECT cart.`;
+
         pool.query(
-            `SELECT c.product_id, p.product_name, p.price, p.img_url, c.quantity 
-             FROM cart c JOIN products p ON c.product_id = p.id
-             WHERE c.user_id = ?`,
+            `
+            SELECT cart.product_id, products.product_name, products.price, products_images.img_url, cart.quantity 
+            FROM cart INNER JOIN products ON cart.product_id = products.product_id INNER JOIN products_images ON products.product_id = products_images.product_id
+            WHERE cart.user_id = ?`,
             [userId],
-            (err, cartItems) => {
+            (err, result) => {
                 if (err) {
-                    return res.status(500).json({ error: "Hiba a kosár lekérésekor." });
+                    return res.status(500).json({ error: err });
                 }
-                res.status(201).json({ message: "Kosár frissítve!", cart: cartItems });
+                res.status(201).json({ message: "Kosár frissítve!", cart: result });
             }
         );
     });
 });
-
 
 // Kosár listázása
 app.get("/api/cart", authenticateToken, (req, res) => {
     const userId = req.user.id;
 
     let sql = `
-    SELECT cart.product_id, products.product_name, products.price, products.img_url, cart.quantity, 
-           (products.price * cart.quantity) as total_price
-    FROM cart 
-    INNER JOIN products ON cart.product_id = products.id
+    SELECT cart.product_id, products.product_name, products.price, products_images.img_url, cart.quantity, 
+    (products.price * cart.quantity) as total_price
+    FROM cart
+    INNER JOIN products ON cart.product_id = products.product_id 
+    INNER JOIN products_images ON products.product_id = products_images.product_id
     WHERE cart.user_id = ?
 `;
 
@@ -566,7 +566,7 @@ app.get("/api/search", (req, res) => {
     }
 
     console.log("Keresési feltétel:", search);
-    
+
     const sql = `
         SELECT * FROM products JOIN products_images USING(product_id)
         WHERE products.category LIKE ? OR products.brand LIKE ? OR products.size LIKE ? OR products.color LIKE ?
@@ -582,7 +582,7 @@ app.get("/api/search", (req, res) => {
         if (result.length === 0) {
             return res.status(404).json({ error: "Keresett elem nem található" });
         }
-        
+
         return res.status(200).json(result);
     });
 });
